@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-com2',
@@ -7,9 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class Com2Component implements OnInit {
   @Input("count2") count = 0;
+  @Output("reset2") reset = new EventEmitter<void>()
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClickReset(){
+    this.reset.emit();
   }
 
 }

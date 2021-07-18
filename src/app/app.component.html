@@ -4,8 +4,9 @@
 <div>{{isProduct}}</div>
 <div>{{account | json}}</div>
 <div>{{getReturn()}}</div>
+<div>time1 of com1 : {{time1}}</div>
 
 <hr>
 <button (click)="onClick()">Click</button>
-<app-com1 [count]="version"></app-com1>
-<app-com2 [count2]="version"></app-com2>
+<app-com1 (change)="onChange1($event)" [count]="version"></app-com1>
+<app-com2 (reset2)="onResetVersion()" [count2]="version"></app-com2>
