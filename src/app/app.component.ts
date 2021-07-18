@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngCommunication';
+  title = 'Aslam';
+  version = 10;
+  isProduct = false;
+  account = {username: "admin", password: "1234"}
+
+  getReturn(){
+    return "A";
+  }
+
+
+
+
 }
