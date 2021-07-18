@@ -7,12 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Aslam';
-  version = 10;
+  version = 0;
   isProduct = false;
   account = {username: "admin", password: "1234"}
 
   getReturn(){
     return "A";
+  }
+  onClick(){
+    this.version++;
   }
 
 
